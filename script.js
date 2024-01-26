@@ -6,6 +6,14 @@ let message = document.getElementById('message');
 let submitBtn = document.getElementById('btn');
 let validationForm = document.getElementById('validation');
 
+function validateInput(){
+	return name.value !== "" && email.value !== "" && phoneNumber.value !== "" && message.value !== "";
+}
+
 submitBtn.addEventListener('click', function(){
-	validationForm.style.display = "block";
+	if(validateInput)
+	{
+		validationForm.style.display = "block";
+	}
+	
 });
